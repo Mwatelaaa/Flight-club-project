@@ -3,12 +3,12 @@ from data_manager import DataManager
 from flight_search import FlightSearch
 from notification_manager import NotificationManager
 
+ORIGIN_CITY_IATA = "NBO"
+
 data_manager = DataManager()
 sheet_data = data_manager.get_destination_data()
 flight_search = FlightSearch()
 notification_manager = NotificationManager()
-
-ORIGIN_CITY_IATA = "NBO"
 
 if sheet_data[0]["iataCode"] == "":
     for row in sheet_data:
