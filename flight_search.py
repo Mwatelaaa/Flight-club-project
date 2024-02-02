@@ -56,6 +56,7 @@ class FlightSearch:
                 headers=headers,
                 params=query,
             )
+            
             data = response.json()["data"][0]
             pprint(data)
             flight_data = FlightData(
